@@ -6,6 +6,7 @@
 
 .l-main1 {
   margin-top: 60px;
+  overflow: hidden;
 
   @include g.mq_up-pc {
     margin-top: 80px;

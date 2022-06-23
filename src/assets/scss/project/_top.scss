@@ -1,0 +1,14 @@
+@use '../global/' as g;
+
+.p-top {
+
+  .u-bg--color1 {
+    padding: 20px;
+    border-radius: 10px;
+
+    .c-btn1 {
+      background: g.$font_base;
+      color: #fff;
+    }
+  }
+}

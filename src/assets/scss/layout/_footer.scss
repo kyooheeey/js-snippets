@@ -1,21 +1,37 @@
 @use '../global/' as g;
 
 .l-footer {
-  padding: 40px 0;
+  padding: 40px 0 20px;
   background: #282c34;
   color: #abb2bf;
 
   @include g.mq_up-pc {
-    padding: 80px 0;
+    padding: 80px 0 40px;
+
+    .u-inner {
+      align-items: flex-start;
+    }
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1;
 
     @include g.mq_up-pc {
-      font-size: 4rem;
+      font-size: 3rem;
+    }
+
+    &_icon {
+      display: inline-block;
+      width: 1.1em;
+      margin-right: 0.4em;
+
+      img {
+        vertical-align: middle;
+      }
     }
   }
 
@@ -70,8 +86,10 @@
   }
 
   &__copy {
-    display: inline-block;
+    display: block;
     margin-top: 30px;
+    opacity: .5;
+    text-align: center;
 
     @include g.mq_up-pc {
       margin-top: 60px;

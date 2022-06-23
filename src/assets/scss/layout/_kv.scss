@@ -8,6 +8,10 @@
   color: #fff;
   text-shadow: 1px 1px 5px rgba(64, 59, 20, 0.5);
 
+  @include g.mq_up-pc {
+    height: 550px;
+  }
+
   &__inner {
     position: absolute;
     top: 0;
@@ -22,6 +26,10 @@
 
   &__content {
     width: 80%;
+
+    @include g.mq_up-pc {
+      width: 50%;
+    }
   }
 
   .c-text {

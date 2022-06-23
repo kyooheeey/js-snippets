@@ -246,6 +246,40 @@ function (module, exports) {
     });
   };
 
+  scrollFuncs.scroll2_2 = function () {
+    var fadeTxt = document.querySelectorAll('.js-fadeTxt2');
+    var scaleWeight = 0.007;
+    window.addEventListener('scroll', function () {
+      for (var i = 0; i < fadeTxt.length; i++) {
+        var fadeTxtY = fadeTxt[i].getBoundingClientRect().top;
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var offset = fadeTxtY + scrollY;
+
+        if (scrollY > offset - windowHeight) {
+          fadeTxt[i].style.transform = "scale(".concat(1 + scaleWeight * (windowHeight - fadeTxtY), ")");
+        }
+      }
+    });
+  };
+
+  scrollFuncs.scroll3_1 = function () {
+    var fadeBg = document.querySelectorAll('.js-fadeBg');
+    window.addEventListener('scroll', function () {
+      for (var i = 0; i < fadeBg.length; i++) {
+        var fadeBgY = fadeBg[i].getBoundingClientRect().top;
+        var fadeBgH = fadeBg[i].clientHeight;
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var offset = fadeBgY + scrollY;
+
+        if (scrollY > offset - windowHeight * 0.5 && scrollY < offset + fadeBgH - windowHeight * 0.5) {
+          fadeBg[i].classList.add('is-fade');
+        } else {
+          fadeBg[i].classList.remove('is-fade');
+        }
+      }
+    });
+  };
+
   var scrollInit = function scrollInit() {
     var scrollPage = document.getElementById('scroll');
 
@@ -254,6 +288,8 @@ function (module, exports) {
       scrollFuncs.scroll1_2();
       scrollFuncs.scroll1_3();
       scrollFuncs.scroll2_1();
+      scrollFuncs.scroll2_2();
+      scrollFuncs.scroll3_1();
     }
   };
 
