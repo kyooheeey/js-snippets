@@ -4,4 +4,8 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.3;
+
+  @include g.mq_up-pc {
+    font-size: 4.5rem;
+  }
 }
