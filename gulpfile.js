@@ -34,6 +34,10 @@ const fs = require('fs');
 // htmlの自動整形
 const htmlbeautify = require("gulp-html-beautify");
 
+// geihubpageデプロイ
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
+
 /*
  * env
  */
@@ -226,3 +230,8 @@ const scripts = parallel(
 
 exports.default = series( scripts, sync, watchFiles );
 exports.build = series( TASK__clean, scripts );
+
+gulp.task('deploy', function() {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
+});
