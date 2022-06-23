@@ -1,0 +1,113 @@
+<% 
+const meta = {
+  id: 'scroll',
+  title: 'SCROLL ANIMATION | JS SNIPPETS',
+  description: '',
+  keywords: '',
+  filePath: './../'
+}
+%>
+
+<%- include('./../components/_head', {meta: meta}) %>
+
+<%- include('./../components/_header', {meta: meta}) %>
+
+<main class="p-<%= meta.id %>__main l-main1">
+  <div class="l-sv">
+    <div class="l-sv__inner">
+      <h1 class="c-hdg1">SCROLL ANIMATION</h1>
+      <p class="c-text">スクロールに合わせて要素が表示される<br>アニメーションサンプルです。</p>
+    </div>
+  </div>
+  <section class="l-section1">
+    <div class="u-inner">
+      <h2 class="c-hdg2 u-text--center">基本となる実装方法</h2>
+      <div class="c-code">
+        <pre><code>const targets = document.querySelectorAll('.js-targets');
+
+window.addEventListener('scroll', () => {
+    for(let i = 0;i < targets.length;i++) {
+        const targetY = targets[i].getBoundingClientRect().top;
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;  
+        const offset = targetY + scrollY;
+        if(scrollY > offset - windowHeight * 0.7){
+            targets[i].classList.add('is-animated')
+        }  
+    }
+})</code></pre>
+      </div>
+    </div>
+  </section>
+  <section class="l-section1 u-text--center">
+    <h2 class="c-hdg2">SAMPLE 1-1</h2>
+    <p class="c-text">【画像】フェードイン＋スケール①</p>
+    <ul class="c-list2">
+      <li class="c-list2__item js-fadePic1">
+        <img src="<%= meta.filePath %>assets/images/sample1.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic1">
+        <img src="<%= meta.filePath %>assets/images/sample2.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic1">
+        <img src="<%= meta.filePath %>assets/images/sample3.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic1">
+        <img src="<%= meta.filePath %>assets/images/sample4.jpg" alt="">
+      </li>
+    </ul>
+  </section>
+
+  <section class="l-section1 u-text--center">
+    <h2 class="c-hdg2">SAMPLE 1-2</h2>
+    <p class="c-text">【画像】前面の色板がスライド＋フィルター</p>
+    <ul class="c-list2">
+      <li class="c-list2__item js-fadePic2">
+        <img src="<%= meta.filePath %>assets/images/sample1.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic2">
+        <img src="<%= meta.filePath %>assets/images/sample2.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic2">
+        <img src="<%= meta.filePath %>assets/images/sample3.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic2">
+        <img src="<%= meta.filePath %>assets/images/sample4.jpg" alt="">
+      </li>
+    </ul>
+  </section>
+
+  <section class="l-section1 u-text--center">
+    <h2 class="c-hdg2">SAMPLE 1-3</h2>
+    <p class="c-text">【画像】フェードイン＋スケール②</p>
+    <ul class="c-list2">
+      <li class="c-list2__item js-fadePic3">
+        <img src="<%= meta.filePath %>assets/images/sample1.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic3">
+        <img src="<%= meta.filePath %>assets/images/sample2.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic3">
+        <img src="<%= meta.filePath %>assets/images/sample3.jpg" alt="">
+      </li>
+      <li class="c-list2__item js-fadePic3">
+        <img src="<%= meta.filePath %>assets/images/sample4.jpg" alt="">
+      </li>
+    </ul>
+  </section>
+
+  <section class="l-section1">
+    <div class="u-inner">
+      <div class="u-text--center">
+        <h2 class="c-hdg2">SAMPLE 2-1</h2>
+        <p class="c-text">【テキスト】１行ごとにフェードイン＋せり上がり</p>
+      </div>
+      <p class="c-text1 js-fadeTxt1">
+        <span class="js-fadeTxt1__line"><span class="js-fadeTxt1__line_inner">Lorem ipsum dolor</span></span><br>
+        <span class="js-fadeTxt1__line"><span class="js-fadeTxt1__line_inner">sit amet, consectetur</span></span><br>
+        <span class="js-fadeTxt1__line"><span class="js-fadeTxt1__line_inner">adipisci elit, sed...</span></span>
+      </p>
+    </div>
+  </section>
+</main>
+
+<%- include('./../components/_footer', {meta: meta}) %>

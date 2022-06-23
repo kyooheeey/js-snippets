@@ -1,0 +1,10 @@
+@use 'scroll';
+@use 'loader';
+
+body {
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+

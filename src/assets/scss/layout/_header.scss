@@ -1,0 +1,39 @@
+@use '../global/' as g;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
+  z-index: 5;
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+
+    @include g.mq_up-pc {
+      width: calc(100% - 200px);
+      height: 80px;
+    }
+  }
+
+  &__logo {
+    color: #333;
+    font-weight: 700;
+
+    @include g.mq_up-pc {
+      font-size: 2.4rem;
+    }
+  }
+  
+  .fa-js-square {
+    color: g.$accent_color;
+    margin-right: 0.5em;
+  }
+}

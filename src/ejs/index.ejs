@@ -1,0 +1,40 @@
+<% 
+const meta = {
+  id: 'top',
+  title: 'TOP | JS SNIPPETS',
+  description: '',
+  keywords: '',
+  filePath: './'
+}
+%>
+
+<%- include('./components/_head', {meta: meta}) %>
+
+<%- include('./components/_header', {meta: meta}) %>
+
+<main class="p-<%= meta.id %>__main l-main1">
+  <div class="u-inner">
+    <div class="l-kv">
+      <div class="l-kv__inner">
+        <div class="l-kv__content">
+          <h1 class="c-hdg1">フロント実装でよく使う<br>アニメーションの備忘録</h1>
+          <p class="c-text">今後のコーディングの効率化のために、今まで実装してきたアニメーションで使い回しできそうなものを集めました。</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="l-section1">
+      <h2 class="c-hdg2">ローディング画面</h2>
+      <p class="c-text"></p>
+      <a href="./loader/" class="c-btn1">詳しく見る</a>
+    </section>
+
+    <section class="l-section1">
+      <h2 class="c-hdg2">スクロールアニメーション</h2>
+      <p class="c-text"></p>
+      <a href="./scroll-animation/" class="c-btn1">詳しく見る</a>
+    </section>
+  </div>
+</main>
+
+<%- include('./components/_footer', {meta: meta}) %>

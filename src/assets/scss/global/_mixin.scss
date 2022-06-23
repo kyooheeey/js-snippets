@@ -1,0 +1,14 @@
+@use '../global/a_mq' as mq;
+@use '../global/vars' as va;
+
+@mixin code-area {
+  padding: 20px;
+  background: rgb(40,44, 52);
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  text-align: left;
+  color: #abb2bf;
+  overflow-x: auto;
+}

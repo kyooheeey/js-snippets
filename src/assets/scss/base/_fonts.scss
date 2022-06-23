@@ -1,0 +1,19 @@
+@use '../global/' as g;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: 'Roboto','Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  color: g.$font_base;
+
+  @include g.mq_up-pc {
+    font-size: 1.6rem;
+  }
+}

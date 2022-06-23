@@ -1,0 +1,61 @@
+<% 
+const meta = {
+  id: 'loader',
+  title: 'LOADER | JS SNIPPETS',
+  description: '',
+  keywords: '',
+  filePath: './../'
+}
+%>
+
+<%- include('./../components/_head', {meta: meta}) %>
+
+<%- include('./../components/_header', {meta: meta}) %>
+
+<main class="p-<%= meta.id %>__main l-main1">
+  <div class="l-sv">
+    <div class="l-sv__inner">
+      <h1 class="c-hdg1">LOADER ANIMATION</h1>
+      <p class="c-text">ローディング画面の<br>アニメーションサンプルです。</p>
+    </div>
+  </div>
+  <div class="u-inner">
+    <section class="l-section1">
+      <ul class="c-list1">
+        <li class="c-list1__item">
+          <section>
+            <h2 class="c-hdg2">SAMPLE 1</h2>
+            <p class="c-text">テキストの色が変わっていくアニメーション</p>
+            <a id="js-loader1Btn" href="" class="c-btn1">サンプルを見る</a>
+          </section>
+        </li>
+        <li class="c-list1__item">
+          <section>
+            <h2 class="c-hdg2">SAMPLE 2</h2>
+            <p class="c-text">テキストが１文字ずつせり上がっていくアニメーション</p>
+            <a id="js-loader2Btn" href="" class="c-btn1">サンプルを見る</a>
+          </section>
+        </li>
+      </ul>
+    </section>
+  </div>
+  
+  <div id="js-loader1" class="c-loader">
+    <div class="c-loader__inner">
+      <div id="js-loader1Logo" class="c-loader__content">
+        <p class="c-loader__logo js-loader1__text">LOADER SAMPLE 1</p>
+        <p class="c-text js-loader1__text">sample sample sample</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="js-loader2" class="c-loader">
+    <div class="c-loader__inner">
+      <div class="c-loader__content">
+        <p id="js-loader2Logo" class="c-loader__logo js-loader2__text">LOADER SAMPLE 2</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('./../components/_footer', {meta: meta}) %>

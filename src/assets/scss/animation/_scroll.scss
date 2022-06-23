@@ -1,0 +1,146 @@
+@use '../global/' as g;
+
+.js-fadePic1 {
+
+  position: relative;
+  overflow: hidden;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: all .7s ease;
+
+  img {
+    transform-origin: center;
+    transform: scale(1.05);
+    transition: all .7s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05)!important;
+    }
+  }
+
+  &.is-fade {
+    transform: translateY(0%);
+    opacity: 1;
+
+    img {
+      transform: scale(1);
+    }
+  }
+
+  &:nth-child(even),
+  &:nth-child(even) img {
+    transition-delay: .3s;
+  }
+}
+
+.js-fadePic2 {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F9F8EB;
+    z-index: 1;
+  }
+
+  img {
+    filter: saturate(10%) blur(1px);
+  }
+
+  &.is-show {
+
+    &::before {
+      width: 0;
+      transition: all .5s ease;
+    }
+
+    img {
+      filter: saturate(100%) blur(0);
+      transition: all .8s .1s ease;
+    }
+  }
+
+  &:nth-child(even) {
+    &.is-show {
+
+      &::before {
+        transition: all .5s .3s ease;
+      }
+
+      img {
+        transition: all .8s .4s ease;
+      }
+    }
+  }
+}
+
+.js-fadePic3 {
+
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .7s ease;
+
+  img {
+    transform-origin: center;
+    transform: scale(1.2);
+    transition: all .8s ease;
+  }
+
+  &.is-fade {
+    opacity: 1;
+
+    img {
+      transform: scale(1);
+    }
+  }
+
+  &:nth-child(even),
+  &:nth-child(even) img {
+    transition-delay: .3s;
+  }
+}
+
+
+.js-fadeTxt1 {
+
+  &__line {
+    display: inline-block;
+    overflow: hidden;
+  
+    &_inner {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(.5em);
+      transition: all .7s ease;
+    }
+  
+    &:nth-of-type(2) .js-fadeTxt1__line_inner {
+      transition-delay: .2s;
+    }
+  
+    &:nth-of-type(3) .js-fadeTxt1__line_inner {
+      transition-delay: .4s;
+    }
+  }
+
+  &.is-fade .js-fadeTxt1__line_inner {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.is-show {
+  display: block!important;
+}
+
+.is-fadeout {
+  opacity: 0;
+}

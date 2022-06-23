@@ -1,0 +1,28 @@
+<footer class="l-footer">
+  <div class="u-inner u-flex--pc">
+    <a href="" class="l-footer__logo"><i class="fa-brands fa-js-square"></i>JS SNIPPETS</a>
+    <div class="l-footer__content">
+      <nav class="l-footer__nav">
+        <ul class="l-footer__nav">
+          <% for(let i = 0; i < contents.length; i++) { %>
+          <li class="l-footer__nav_item">
+            <a href="<%= meta.filePath %><%= contents[i].path %>" class="l-footer__nav_link"><%= contents[i].title %></a>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+      <ul class="l-footer__links">
+        <li class="l-footer__links_item">
+          <a href="" class="l-footer__liknks_icon"><i class="fa-brands fa-twitter-square"></i></a>
+        </li>
+        <li class="l-footer__links_item">
+          <a href="" class="l-footer__liknks_icon"><i class="fa-brands fa-github-square"></i></a>
+        </li>
+      </ul>
+      <small class="l-footer__copy"></small>
+    </div>
+  </div>
+</footer>
+<script src="<%= meta.filePath %>assets/js/bundle.js"></script>
+</body>
+</html>

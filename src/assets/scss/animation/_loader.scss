@@ -1,0 +1,43 @@
+@use '../global/' as g;
+
+.js-loader1__text {
+  background: #fff;
+  background: linear-gradient(90deg, g.$accent_color 0%, g.$accent_color 49%, #fff 50%, #fff 100%);
+  background-size: 300% 100%;
+  background-position: 100%;
+  animation: fade-grd 3s 1s linear forwards;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes fade-grd {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.js-loader2__text {
+  transition: opacity 400ms;
+
+  span {
+    display: inline-block;
+    min-width: .5em;
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes loader-theme {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

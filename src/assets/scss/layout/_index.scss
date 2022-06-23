@@ -1,0 +1,37 @@
+@use 'header';
+@use 'footer';
+@use 'kv';
+
+@use '../global/' as g;
+
+.l-main1 {
+  margin-top: 60px;
+
+  @include g.mq_up-pc {
+    margin-top: 80px;
+  }
+}
+
+.l-section1 {
+  padding: 30px 0;
+
+  @include g.mq_up-pc {
+    padding: 60px 0;
+  }
+
+  &:last-child {
+    padding-bottom: 80px;
+
+    @include g.mq_up-pc {
+      padding-bottom: 120px;
+    }
+  }
+
+  .c-hdg2 + .c-text {
+    margin-top: 1em;
+  }
+
+  .c-btn1 {
+    margin-top: 1.5em;
+  }
+}

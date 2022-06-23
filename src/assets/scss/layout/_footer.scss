@@ -1,0 +1,70 @@
+@use '../global/' as g;
+
+.l-footer {
+  padding: 40px 0;
+  background: #282c34;
+  color: #abb2bf;
+
+  @include g.mq_up-pc {
+    padding: 80px 0;
+  }
+
+  &__logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+
+    @include g.mq_up-pc {
+      font-size: 4rem;
+    }
+  }
+
+    
+  .fa-js-square {
+    margin-right: 0.5em;
+  }
+
+  &__content {
+
+    @include g.mq_up-pc {
+      text-align: right;
+    }
+  }
+
+  &__nav {
+    margin-top: 20px;
+
+    @include g.mq_up-pc {
+      margin-top: 0;
+    }
+
+    &_item {
+      line-height: 1;
+
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    line-height: 1;
+
+    @include g.mq_up-pc {
+      margin-top: 40px;
+      font-size: 4rem;
+    }
+
+    &_item {
+      margin-right: 15px;
+
+      @include g.mq_up-pc {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+}

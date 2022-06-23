@@ -1,0 +1,49 @@
+@use '../global/' as g;
+
+.l-kv {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url(../images/kv.jpg) no-repeat center / cover;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(64, 59, 20, 0.5);
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5vw;
+    background: rgba($color: #c7b525, $alpha: 0.1);
+  }
+
+  &__content {
+    width: 80%;
+  }
+
+  .c-text {
+    margin-top: 1.5em;
+  }
+}
+
+.l-sv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  padding: 5vw;
+  background: rgba($color: #c7b525, $alpha: 0.1);
+  text-align: center;
+
+  &__inner {
+    width: 80%;
+  }
+
+  .c-text {
+    margin-top: 1em;
+  }
+}

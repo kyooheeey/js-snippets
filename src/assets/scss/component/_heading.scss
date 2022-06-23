@@ -1,0 +1,22 @@
+@use '../global/' as g;
+
+*[class^=c-hdg] {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.c-hdg1 {
+  font-size: 2rem;
+
+  @include g.mq_up-pc {
+    font-size: 2.4rem;
+  }
+}
+
+.c-hdg2 {
+  font-size: 1.6rem;
+
+  @include g.mq_up-pc {
+    font-size: 2rem;
+  }
+}

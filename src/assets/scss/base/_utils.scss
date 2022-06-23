@@ -1,0 +1,27 @@
+@use '../global/' as g;
+
+.u-inner {
+  width: 90%;
+  margin: 0 auto;
+
+  @include g.mq_up-pc {
+    width: calc(100% - 200px);
+    max-width: 1600px;
+  }
+}
+
+.u-text--center {
+  text-align: center;
+}
+
+.u-flex--pc {
+
+  @include g.mq_up-pc {
+    display: flex;
+    justify-content: space-between;
+
+    &.is-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
